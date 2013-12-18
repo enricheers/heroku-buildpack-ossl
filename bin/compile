@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+echo "-----> Fetching OpenSSL binaries"
+mkdir -p $1/vendor/openssl
+cd $1/vendor/openssl
+curl -L https://github.com/enricheers/heroku-buildpack-static/raw/master/openssl-1.0.1e.tgz -s -o - | tar xzf -
+echo "-----> Got OpenSSL binaries"
+
+echo "-----> Downloading Root Cert pack"
+curl http://curl.haxx.se/ca/cacert.pem > $1/vendor/openssl/ssl/cert.pem
+echo "-----> Got Cert"
+
 echo "-----> Copying .profile.d scripts"
 mkdir -p $1/.profile.d
 cp -Rv `dirname $0`/../.profile.d/* $1/.profile.d

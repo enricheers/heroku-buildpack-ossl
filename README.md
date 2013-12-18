@@ -1,7 +1,4 @@
-heroku-buildpack
-=======
-
-# Heroku Buildpack
+# heroku-buildpack-ossl
 
 This builds a Heroku instance with default ruby version (ruby-2.0.0)
 
@@ -11,3 +8,4 @@ This builds a Heroku instance with default ruby version (ruby-2.0.0)
 
     $ cat .buildpacks
     https://github.com/enricheers/heroku-buildpack-ruby.git
+    https://github.com/enricheers/heroku-buildpack-ossl.git
