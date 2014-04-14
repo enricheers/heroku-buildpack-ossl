@@ -3,10 +3,10 @@
 
 echo "-----> Extracting OpenSSL binaries"
 mkdir -p $1/vendor/openssl
-cp -Rv `dirname $0`/../.tmp/openssl-1.0.1e.tgz $1/vendor/openssl
+cp -Rv `dirname $0`/../.tmp/openssl-1.0.1g.tgz $1/vendor/openssl
 cd $1/vendor/openssl
-tar xzf openssl-1.0.1e.tgz
-rm openssl-1.0.1e.tgz
+tar xzf openssl-1.0.1g.tgz
+rm openssl-1.0.1g.tgz
 echo "-----> Got OpenSSL binaries"
 
 echo "-----> Downloading Root Cert pack"
